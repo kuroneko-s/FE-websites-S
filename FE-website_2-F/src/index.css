@@ -1,0 +1,174 @@
+body {
+  height: 100vh;
+  width: 100vw;
+
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    117deg,
+    rgba(220, 0, 255, 1) 0%,
+    rgba(168, 68, 187, 1) 21%,
+    rgba(1, 127, 128, 1) 39%,
+    rgba(23, 118, 180, 1) 64%,
+    rgba(40, 98, 220, 1) 83%,
+    rgba(55, 0, 255, 1) 100%
+  );
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.main {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+nav {
+  width: 80%;
+  /* position: sticky; */
+  margin: 20px auto;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  /* flex 초기 사이즈 */
+  flex-basis: 20%;
+  z-index: 1;
+}
+
+.logo img {
+  width: 150px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  /* li style (왼쪽 모양) */
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.information {
+  width: 1000px;
+  height: 1000px;
+  position: absolute;
+  top: 48%;
+  left: -10%;
+  transform: translateY(-50%);
+}
+
+#circle {
+  width: 1000px;
+  height: 1000px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  transform: rotate(0deg);
+  transition: 1s;
+}
+
+.feature img {
+  width: 70px;
+}
+
+.feature {
+  position: absolute;
+  display: flex;
+  color: #fff;
+  align-items: center;
+}
+
+.feature div {
+  margin-left: 30px;
+}
+
+.feature div p {
+  margin-top: 15px;
+}
+
+.feature:nth-child(1) {
+  top: 450px;
+  right: 50px;
+}
+
+.feature:nth-child(2) {
+  top: 150px;
+  left: 350px;
+  transform: rotate(-90deg);
+}
+
+.feature:nth-child(3) {
+  bottom: 450px;
+  left: 50px;
+  transform: rotate(-180deg);
+}
+
+.feature:nth-child(4) {
+  bottom: 150px;
+  right: 350px;
+  transform: rotate(-270deg);
+}
+
+.mobile {
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.controls {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.controls h3 {
+  margin: 15px 0;
+  color: #fff;
+  font-size: 24px;
+}
+
+.controls img:first-child {
+  width: 15px;
+  cursor: pointer;
+}
+
+.controls img:last-child {
+  width: 15px;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+.overlay {
+  width: 0;
+  height: 0;
+  border-top: 500px solid #fff;
+  border-right: 500px solid transparent;
+  border-bottom: 500px solid #fff;
+  border-left: 500px solid #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
