@@ -1,0 +1,210 @@
+body {
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+}
+
+.container {
+  position: relative;
+
+  background-color: #c6f1e7;
+  height: 100vh;
+  width: 100vw;
+  color: black;
+  padding: 0 50px;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  left: 0;
+  right: 0;
+
+  margin: 0 auto;
+  width: 92%;
+
+  animation-name: topToBottom;
+  animation-duration: 1s;
+}
+
+@keyframes topToBottom {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes leftToRight {
+  0% {
+    left: -500px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes rightToLeft {
+  0% {
+    right: -500px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+.header .logo {
+  margin-right: 25px;
+}
+
+.header .logo img {
+  width: 150px;
+  height: 100px;
+}
+
+.header .menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header .menu li:not(:last-child) {
+  margin-right: 15px;
+}
+
+.header .profile {
+  position: absolute;
+  right: 0;
+}
+
+.header .profile .inner-box {
+  position: relative;
+}
+
+.header .profile .inner-box span {
+  background-color: rebeccapurple;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.header .profile .point {
+  position: absolute;
+  top: -19px;
+  right: -8px;
+
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  z-index: 0;
+
+  text-align: center;
+  line-height: 18px;
+}
+
+.description {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  left: 0;
+  right: 0;
+
+  margin: 0 auto;
+  width: 80%;
+  height: 70%;
+}
+
+.description .overview {
+  position: absolute;
+  width: 38%;
+
+  animation-name: leftToRight;
+  animation-duration: 1s;
+}
+
+.description .overview .main-btn {
+  background: linear-gradient(
+    13deg,
+    rgba(104, 63, 251, 1) 0%,
+    rgba(65, 181, 250, 1) 40%,
+    rgba(92, 217, 232, 0.7175245098039216) 100%
+  );
+
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: none;
+  border-radius: 8px;
+
+  height: 40px;
+  width: 150px;
+
+  font-weight: 600;
+  font-size: 16px;
+
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 25px;
+}
+
+.description .overview h1 {
+  font-size: 62px;
+  margin-bottom: 25px;
+}
+
+.description .overview p {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 32px;
+
+  margin-bottom: 25px;
+}
+
+.description .overview .arrow-btn button {
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50%;
+
+  font-size: 28px;
+}
+
+.description .overview .arrow-btn button:first-child {
+  background: rgba(0, 0, 0, 0);
+  border: rgba(0, 0, 0, 0.24) solid 1px;
+}
+
+.description .overview .arrow-btn button:last-child {
+  background: linear-gradient(
+    13deg,
+    rgba(104, 63, 251, 1) 0%,
+    rgba(65, 181, 250, 1) 40%,
+    rgba(92, 217, 232, 0.7175245098039216) 100%
+  );
+}
+
+.description .img {
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+  right: 0;
+  top: 100px;
+
+  animation-name: rightToLeft;
+  animation-duration: 1s;
+}
+
+.description img {
+  width: 100%;
+  height: 100%;
+}
